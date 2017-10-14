@@ -8,8 +8,8 @@ $("#magnify").hide();
 
 //set overlay properties
 $("#overlay").show();
-$("#overlay").css('height', mag_height);
-$("#overlay").css('width', mag_width);
+$("#overlay").css('height', mag_height-4);
+$("#overlay").css('width', mag_width-4);
 $("#overlay").hide();
 
 //get coordinates of rectangular area of interest
@@ -38,8 +38,8 @@ $( document ).on( "mousemove", function( event ) {
     var t = y - mag_height/2;
     $("#magnify").css('left', l);
     $("#magnify").css('top', t);
-    $("#overlay").css('left', l);
-    $("#overlay").css('top', t);
+    $("#overlay").css('left', l+2);
+    $("#overlay").css('top', t+2);
     //adjust position of overlay's background image (top left corner of div is 0,0)
     var bkg_left = x - (l+scaling_factor*(x-left_lim));
     var bkg_top = y - (t+scaling_factor*(y-lower_lim));
