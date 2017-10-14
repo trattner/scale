@@ -8,7 +8,7 @@ $("#magnify").hide();
 
 //set overlay properties
 $("#overlay").show();
-$("#overlay").css('height', mag_height-4);
+$("#overlay").css('height', mag_height-4); //quick patch for centering magnified area...couple pixels stuck out to either side of glass
 $("#overlay").css('width', mag_width-4);
 $("#overlay").hide();
 
@@ -38,7 +38,7 @@ $( document ).on( "mousemove", function( event ) {
     var t = y - mag_height/2;
     $("#magnify").css('left', l);
     $("#magnify").css('top', t);
-    $("#overlay").css('left', l+2);
+    $("#overlay").css('left', l+2); //quick patch for centering magnified area...couple pixels stuck out to either side of glass
     $("#overlay").css('top', t+2);
     //adjust position of overlay's background image (top left corner of div is 0,0)
     var bkg_left = x - (l+scaling_factor*(x-left_lim));
