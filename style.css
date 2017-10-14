@@ -1,0 +1,29 @@
+.container {
+  height: 100%;
+  width: 100%;
+}
+
+img {
+  position: absolute;
+}
+
+#little {
+  z-index: 1;
+}
+
+#magnify {
+  z-index: 3;
+}
+
+#overlay{
+  position: absolute;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1528666/worldsfair-large.jpg");
+  z-index: 2;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.hidden {
+  display: none;
+}
