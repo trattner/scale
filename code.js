@@ -29,8 +29,8 @@ $( document ).on( "mousemove", function( event ) {
 
   //hide images if outside of rectangle --not very efficient
   if (outside(x,y)) {
-    $("#magnify").hide();
-    $("#overlay").hide();
+    $("#magnify").fadeOut(300);
+    $("#overlay").fadeOut(200);
       $('body').css('cursor', 'default');
   } else {
     //center magnify glass and overlay
@@ -50,7 +50,7 @@ $( document ).on( "mousemove", function( event ) {
 
 $("#little").mouseenter(function(){
   //console.log('entered!');
-  $("#magnify").show();
-  $("#overlay").show();
+  $("#magnify").fadeIn(250);
+  $("#overlay").fadeIn(600);
   $('body').css('cursor', 'none');
 });
